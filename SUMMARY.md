@@ -1,6 +1,6 @@
 # Table of contents
 
-* [目录](README.md)
+* [章节目录](README.md)
 
 ## 出版信息 <a href="#publish-info" id="publish-info"></a>
 

@@ -1,11 +1,27 @@
-# 目录
-
-已施工部分：序、前言、第 1、7、8、9、10、11、12 章，全部实验简介，实验 1、2 文档
-
-待施工部分：第 2、3、4、5、6 章，实验 3、4、5、6、7、8、9 文档
+# 章节目录
 
 {% content-ref url="ch01-a-tour-of-computer-systems/" %}
 [ch01-a-tour-of-computer-systems](ch01-a-tour-of-computer-systems/)
+{% endcontent-ref %}
+
+{% content-ref url="part1/ch02-representing-and-manipulating-information/" %}
+[ch02-representing-and-manipulating-information](part1/ch02-representing-and-manipulating-information/)
+{% endcontent-ref %}
+
+{% content-ref url="part1/ch03-machine-level-representing-of-programs/" %}
+[ch03-machine-level-representing-of-programs](part1/ch03-machine-level-representing-of-programs/)
+{% endcontent-ref %}
+
+{% content-ref url="part1/ch04-processor-architecture.md" %}
+[ch04-processor-architecture.md](part1/ch04-processor-architecture.md)
+{% endcontent-ref %}
+
+{% content-ref url="part1/ch05-optimizing-program-performance.md" %}
+[ch05-optimizing-program-performance.md](part1/ch05-optimizing-program-performance.md)
+{% endcontent-ref %}
+
+{% content-ref url="part1/ch06-the-memory-hierarchy.md" %}
+[ch06-the-memory-hierarchy.md](part1/ch06-the-memory-hierarchy.md)
 {% endcontent-ref %}
 
 {% content-ref url="part2/ch07-linking/" %}
