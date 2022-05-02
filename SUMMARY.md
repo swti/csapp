@@ -1,8 +1,8 @@
 # Table of contents
 
-* [本电子书信息](README.md)
+* [目录](README.md)
 
-## 出版信息 <a id="publish-info"></a>
+## 出版信息 <a href="#publish-info" id="publish-info"></a>
 
 * [出版者的话](publish-info/publisher-words.md)
 * [中文版序一](publish-info/chinese-preface-1.md)
@@ -11,7 +11,7 @@
 * [前言](publish-info/preface.md)
 * [关于作者](publish-info/about-authors.md)
 
----
+***
 
 * [第 1 章：计算机系统漫游](ch01-a-tour-of-computer-systems/README.md)
   * [1.1 信息就是位 + 上下文](ch01-a-tour-of-computer-systems/1.1.md)
@@ -25,7 +25,7 @@
   * [1.9 重要主题](ch01-a-tour-of-computer-systems/1.9.md)
   * [1.10 小结](ch01-a-tour-of-computer-systems/1.10-xiao-jie.md)
 
-## 第一部分：程序结构和执行 <a id="part1"></a>
+## 第一部分：程序结构和执行 <a href="#part1" id="part1"></a>
 
 * [第 2 章：信息的表示和处理](part1/ch02-representing-and-manipulating-information/README.md)
   * [2.1 信息存储](part1/ch02-representing-and-manipulating-information/2.1-xin-xi-cun-chu.md)
@@ -43,7 +43,7 @@
 * [第 5 章：优化程序性能](part1/ch05-optimizing-program-performance.md)
 * [第 6 章：存储器层次结构](part1/ch06-the-memory-hierarchy.md)
 
-## 第二部分：在系统上运行程序 <a id="part2"></a>
+## 第二部分：在系统上运行程序 <a href="#part2" id="part2"></a>
 
 * [第 7 章：链接](part2/ch07-linking/README.md)
   * [7.1 编译器驱动程序](part2/ch07-linking/7.1-compiler-drviers.md)
@@ -87,7 +87,7 @@
   * [9.12 小结](part2/ch09-virtual-memory/9.12-summary.md)
   * [家庭作业](part2/ch09-virtual-memory/homework.md)
 
-## 第三部分：程序间的交互和通信 <a id="part3"></a>
+## 第三部分：程序间的交互和通信 <a href="#part3" id="part3"></a>
 
 * [第 10 章：系统级 I/O](part3/ch10-system-level-io/README.md)
   * [10.1 Unix I/O](part3/ch10-system-level-io/10.1-unix-io.md)
@@ -123,12 +123,12 @@
   * [12.8 小结](part3/ch12-concurrent-programming/12.8-summary.md)
   * [家庭作业](part3/ch12-concurrent-programming/homework.md)
 
----
+***
 
 * [附录 A：错误处理](appendix-error-handling.md)
 * [参考文献](references.md)
 
-## 实验 <a id="labs"></a>
+## 实验 <a href="#labs" id="labs"></a>
 
 * [实验总览](labs/labs-overview/README.md)
   * [常见问题](labs/labs-overview/common-problems.md)
@@ -146,4 +146,3 @@
 * [实验 7：Shell Lab](labs/shell-lab.md)
 * [实验 8：Malloc Lab](labs/malloc-lab.md)
 * [实验 9：Proxy Lab](labs/proxy-lab.md)
-
