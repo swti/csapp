@@ -1,4 +1,8 @@
-# 章节目录
+---
+description: A programmer's Perspective Third Edition
+---
+
+# Computer Systems
 
 {% content-ref url="ch01-a-tour-of-computer-systems/" %}
 [ch01-a-tour-of-computer-systems](ch01-a-tour-of-computer-systems/)
