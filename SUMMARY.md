@@ -25,15 +25,15 @@
   * [1.9 Important Themes](ch01-a-tour-of-computer-systems/1.9.md)
   * [1.10 Summary](ch01-a-tour-of-computer-systems/1.10-xiao-jie.md)
 
-## 第一部分：程序结构和执行 <a href="#part1" id="part1"></a>
+## Part 1: Program Structure and Execution <a href="#part1" id="part1"></a>
 
-* [第 2 章：信息的表示和处理](part1/ch02-representing-and-manipulating-information/README.md)
-  * [2.1 信息存储](part1/ch02-representing-and-manipulating-information/2.1-xin-xi-cun-chu.md)
-  * [2.2 整数表示](part1/ch02-representing-and-manipulating-information/2.2-zheng-shu-biao-shi.md)
-  * [2.3 整数运算](part1/ch02-representing-and-manipulating-information/2.3-zheng-shu-yun-suan.md)
-  * [2.4 浮点数](part1/ch02-representing-and-manipulating-information/2.4-fu-dian-shu.md)
-  * [2.5 小结](part1/ch02-representing-and-manipulating-information/2.5-xiao-jie.md)
-  * [家庭作业](part1/ch02-representing-and-manipulating-information/jia-ting-zuo-ye.md)
+* [2. Representing and Manipulating Information](part1/ch02-representing-and-manipulating-information/README.md)
+  * [2.1 Information Storage](part1/ch02-representing-and-manipulating-information/2.1-xin-xi-cun-chu.md)
+  * [2.2 Integer Representations](part1/ch02-representing-and-manipulating-information/2.2-zheng-shu-biao-shi.md)
+  * [2.3 Integer Arithmetic](part1/ch02-representing-and-manipulating-information/2.3-zheng-shu-yun-suan.md)
+  * [2.4 Floating Point](part1/ch02-representing-and-manipulating-information/2.4-fu-dian-shu.md)
+  * [2.5 Summary](part1/ch02-representing-and-manipulating-information/2.5-xiao-jie.md)
+  * [Homework Problems](part1/ch02-representing-and-manipulating-information/jia-ting-zuo-ye.md)
 * [第 3 章：程序的机器级表示](part1/ch03-machine-level-representing-of-programs/README.md)
   * [3.1 历史观点](part1/ch03-machine-level-representing-of-programs/3.1-a-historial-perspective.md)
   * [3.2 程序编码](part1/ch03-machine-level-representing-of-programs/3.2-program-encodings.md)
