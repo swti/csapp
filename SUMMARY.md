@@ -8,22 +8,22 @@
 * [中文版序一](publish-info/chinese-preface-1.md)
 * [中文版序二](publish-info/chinese-preface-2.md)
 * [译者序](publish-info/translators-preface.md)
-* [前言](publish-info/preface.md)
-* [关于作者](publish-info/about-authors.md)
+* [Preface](publish-info/preface.md)
+* [About the Authors](publish-info/about-authors.md)
 
 ***
 
-* [第 1 章：计算机系统漫游](ch01-a-tour-of-computer-systems/README.md)
-  * [1.1 信息就是位 + 上下文](ch01-a-tour-of-computer-systems/1.1.md)
-  * [1.2 程序被其他程序翻译成不同的格式](ch01-a-tour-of-computer-systems/1.2.md)
-  * [1.3 了解编译系统如何工作是大有益处的](ch01-a-tour-of-computer-systems/1.3.md)
-  * [1.4 处理器读并解释储存在内存中的指令](ch01-a-tour-of-computer-systems/1.4.md)
-  * [1.5 高速缓存至关重要](ch01-a-tour-of-computer-systems/1.5.md)
-  * [1.6 存储设备形成层次结构](ch01-a-tour-of-computer-systems/1.6.md)
-  * [1.7 操作系统管理硬件](ch01-a-tour-of-computer-systems/1.7.md)
-  * [1.8 系统之间利用网络通信](ch01-a-tour-of-computer-systems/1.8.md)
-  * [1.9 重要主题](ch01-a-tour-of-computer-systems/1.9.md)
-  * [1.10 小结](ch01-a-tour-of-computer-systems/1.10-xiao-jie.md)
+* [1. A Tour of Computer Systems](ch01-a-tour-of-computer-systems/README.md)
+  * [1.1 Information Is Bits + Context](ch01-a-tour-of-computer-systems/1.1.md)
+  * [1.2 Program Are Translated by Other Programs into Different Forms](ch01-a-tour-of-computer-systems/1.2.md)
+  * [1.3 It Pays to Understand How Compilation Systems Work](ch01-a-tour-of-computer-systems/1.3.md)
+  * [1.4 Processors Read and Interpert Instructions Stored in Memory](ch01-a-tour-of-computer-systems/1.4.md)
+  * [1.5 Cache Matter](ch01-a-tour-of-computer-systems/1.5.md)
+  * [1.6 Storage Devices Form a Hierarchy](ch01-a-tour-of-computer-systems/1.6.md)
+  * [1.7 The Operating System Manages the Hardware](ch01-a-tour-of-computer-systems/1.7.md)
+  * [1.8 Systems Communicate with Other Systems Using Networks](ch01-a-tour-of-computer-systems/1.8.md)
+  * [1.9 Important Themes](ch01-a-tour-of-computer-systems/1.9.md)
+  * [1.10 Summary](ch01-a-tour-of-computer-systems/1.10-xiao-jie.md)
 
 ## 第一部分：程序结构和执行 <a href="#part1" id="part1"></a>
 
