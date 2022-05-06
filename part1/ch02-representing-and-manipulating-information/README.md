@@ -69,4 +69,4 @@ As of the writing of this book, when no option is specified, the program will be
 
 {% endhint %}
 
-![Figure 2.1 Specifying different versions of C to gcc.](<../../.gitbook/assets/image (2).png>)
+![Figure 2.1 Specifying different versions of C to gcc.](<../../.gitbook/assets/image (2) (1).png>)
