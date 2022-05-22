@@ -81,15 +81,15 @@ replace\_byte(0x12345678, 0, 0xAB) --> 0x123456AB
 {% endtabs %}
 
 {% tabs %}
-{% tab title="First Tab" %}
+{% tab title="Solution 2.59" %}
 `(x & 0xff) | (y & ~0xff)`
 {% endtab %}
 
-{% tab title="Second Tab" %}
+{% tab title="Solution 2.60" %}
 ```c
 unsigned replace_byte(unsigned x, int i, unsigned char b) {
-    x &= ~(0xff << i*8);
-    unsigned y = b << i*8;
+    x &= ~(0xff << (i<<3));
+    unsigned y = b << (i<<3);
     return x | y;
 }
 ```
@@ -129,3 +129,58 @@ int get_msb(int x) {
     return xright & 0xFF;
 }
 ```
+
+{% tabs %}
+{% tab title="2.61" %}
+Write C expressions that evaluate to 1 when the following conditions are true and to 0 when they are false. Assume x is of type `int`.
+
+A. Any bit of x equals 1.
+
+B. Any bit of x equals 0.
+
+C. Any bit in the least significant byte of x equals 1.
+
+D. Any bit in the most significant byte of x equals 0.
+
+Your code should follow the bit-level integer coding rules (page 164), with the additional restriction that you may not use equality (==) or inequality (!=) tests.
+{% endtab %}
+
+{% tab title="2.62" %}
+Write a function `int_shifts_are_arithmetic()` that yields 1 when run on a machine that uses arithmetic right shifts for data type `int` and yields 0 otherwise. Your code should work on a machine with any word size. Test your code on several machines.
+{% endtab %}
+
+{% tab title="2.63" %}
+
+{% endtab %}
+
+{% tab title="2.64" %}
+
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Solution 2.61" %}
+```c
+A. !(~0 - x)
+B. !(x - 0)
+C. !(0xff - x&0xff)
+D. !((x & (0xff << ((sizeof(int)-1) << 3))) - 0)
+```
+{% endtab %}
+
+{% tab title="Solution 2.62" %}
+```c
+bool int_shifts_are_arithmetic() {
+    
+}
+```
+{% endtab %}
+
+{% tab title="Solution 2.63" %}
+
+{% endtab %}
+
+{% tab title="Solution 2.64" %}
+
+{% endtab %}
+{% endtabs %}
