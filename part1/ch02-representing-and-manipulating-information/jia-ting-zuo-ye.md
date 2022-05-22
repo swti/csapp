@@ -6,33 +6,59 @@ Compile and run the sample code that uses `show_bytes` (file `show-bytes.c`) on 
 {% endtab %}
 
 {% tab title="2.56 ◆" %}
-Try running the code for show\_bytes for different sample values.
+Try running the code for `show_bytes` for different sample values.
 {% endtab %}
 
 {% tab title="2.57 ◆" %}
-Write procedures show\_short, show\_long, and show\_double that print the byte representations of C objects of types short, long, and double, respectively. Try these out on several machines.
+Write procedures `show_short`, `show_long`, and `show_double` that print the byte representations of C objects of types `short`, `long`, and `double`, respectively. Try these out on several machines.
 {% endtab %}
 
 {% tab title="2.58 ◆◆" %}
-Write a procedure is\_little\_endian that will return 1 when compiled and run on a little-endian machine, and will return 0 when compiled and run on a big- endian machine. This program should run on any machine, regardless of its word size.
+Write a procedure `is_little_endian` that will return 1 when compiled and run on a little-endian machine, and will return 0 when compiled and run on a big-endian machine. This program should run on any machine, regardless of its word size.
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Solution 2.55" %}
-litte endian
+Litte endian.
 {% endtab %}
 
 {% tab title="Solution 2.56" %}
-
+略.
 {% endtab %}
 
 {% tab title="Solution 2.57" %}
+```c
+using byte_pointer = unsigned char*;
 
+void show_bytes(byte_pointer start, size_t len) {
+    for (int i = 0; i < len; i++)
+        printf(" %.2x", start[i]);
+    printf("\n");
+}
+
+void show_short(short x) {
+    show_bytes((byte_pointer) &x, sizeof(short));
+}
+
+void show_long(long x) {
+    show_bytes((byte_pointer) &x, sizeof(long));
+}
+
+void show_double(double x) {
+    show_bytes((byte_pointer) &x, sizeof(double));
+}
+```
 {% endtab %}
 
 {% tab title="Solution 2.58" %}
-
+```c
+bool is_little_endian() {
+    short x = 0x1234;
+    unsigned char* y = (unsigned char*) &x;
+    return y[0] == 0x34;
+}
+```
 {% endtab %}
 {% endtabs %}
 
@@ -44,7 +70,7 @@ Write a C expression that will yield a word consisting of the least significant 
 {% tab title="2.60 ◆◆" %}
 Suppose we number the bytes in a w-bit word from 0 (least significant) to w/8 − 1 (most significant). Write code for the following C function, which will return an unsigned value in which byte i of argument x has been replaced by byte b:
 
-unsigned replace\_byte (unsigned x, int i, unsigned char b);
+`unsigned replace_byte (unsigned x, int i, unsigned char b);`
 
 Here are some examples showing how the function should work:
 
@@ -54,25 +80,41 @@ replace\_byte(0x12345678, 0, 0xAB) --> 0x123456AB
 {% endtab %}
 {% endtabs %}
 
+{% tabs %}
+{% tab title="First Tab" %}
+`(x & 0xff) | (y & ~0xff)`
+{% endtab %}
+
+{% tab title="Second Tab" %}
+```c
+unsigned replace_byte(unsigned x, int i, unsigned char b) {
+    x &= ~(0xff << i*8);
+    unsigned y = b << i*8;
+    return x | y;
+}
+```
+{% endtab %}
+{% endtabs %}
+
 #### Bit-Level Integer Coding Rules
 
 In several of the following problems, we will artificially restrict what programming constructs you can use to help you gain a better understanding of the bit-level, logic, and arithmetic operations of C. In answering these problems, your code must follow these rules:
 
-* Assumptions
+* **Assumptions**
   * Integers are represented in two’s-complement form.
   * Right shifts of signed data are performed arithmetically.
   * Data type `int` is w bits long. For some of the problems, you will be given a specific value for w, but otherwise, your code should work as long as w is a multiple of 8. You can use the expression `sizeof(int)<<3` to compute w.
-* Forbidden
+* **Forbidden**
   * Conditionals (`if` or `?:`), loops, switch statements, function calls, and macro invocations.&#x20;
   * Division, modulus, and multiplication.
   * Relative comparison operators (<, >, <=, and >=).
-* Allowed operations
+* **Allowed operations**
   * All bit-level and logic operations.
   * Left and right shifts, but only with shift amounts between 0 and w − 1.
   * Addition and subtraction.
   * Equality (==) and inequality (!=) tests. (Some of the problems do not allow these.)
   * Integer constants `INT_MIN` and `INT_MAX`.
-  * Casting between data types int and unsigned, either explicitly or implicitly.
+  * Casting between data types `int` and `unsigned`, either explicitly or implicitly.
 
 Even with these rules, you should try to make your code readable by choosing descriptive variable names and using comments to describe the logic behind your solutions. As an example, the following code extracts the most significant byte from integer argument x:
 
