@@ -24,7 +24,23 @@ Litte endian.
 {% endtab %}
 
 {% tab title="Solution 2.56" %}
-略.
+```c
+int x = 0x12345678;
+int* p = &x;
+double y = 1.0;
+show_bytes((byte_pointer) &x, sizeof(int));
+show_bytes((byte_pointer) p, sizeof(int*));
+show_bytes((byte_pointer) &y, sizeof(double));
+```
+
+Running result:
+
+```
+[jack@manager-master CPlusPlus_demo]$ ./test
+ 78 56 34 12
+ 78 56 34 12 24 00 5f df
+ 00 00 00 00 00 00 f0 3f
+```
 {% endtab %}
 
 {% tab title="Solution 2.57" %}
@@ -88,8 +104,16 @@ replace\_byte(0x12345678, 0, 0xAB) --> 0x123456AB
 {% tab title="Solution 2.60" %}
 ```c
 unsigned replace_byte(unsigned x, int i, unsigned char b) {
-    x &= ~(0xff << (i<<3));
-    unsigned y = b << (i<<3);
+    if (i < 0) {
+        return x;
+    }
+    int replace_index = i % sizeof(unsigned);
+    
+    /* Byte i of x set to 0 */
+    x &= ~(0xff << (replace_index <<3));
+    /* Construct y which byte i equal to b and other bytes set to 0 */
+    unsigned y = b << (replace_index <<3);
+    /* Combine x and y */
     return x | y;
 }
 ```
@@ -150,11 +174,40 @@ Write a function `int_shifts_are_arithmetic()` that yields 1 when run on a machi
 {% endtab %}
 
 {% tab title="2.63" %}
+Fill in code for the following C functions. Function `srl` performs a logical right shift using an arithmetic right shift (given by value `xsra`), followed by other operations not including right shifts or division. Function `sra` performs an arithmetic right shift using a logical right shift (given by value `xsrl`), followed by other operations not including right shifts or division. You may use the computation `8*sizeof(int)` to determine w, the number of bits in data type `int`. The shift amount k can range from 0 to w − 1.
 
+```c
+unsigned srl(unsigned x, int k) {
+    /* Perform shift arithmetically */
+    unsigned xsra = (int) x >> k;
+.
+.
+.
+.
+.
+.
+}
+
+int sra(int x, int k) {
+    /* Perform shift logically */
+    int xsrl = (unsigned) x >> k;
+.
+.
+.
+.
+.
+.
+}
+```
 {% endtab %}
 
 {% tab title="2.64" %}
+Write code to implement the following function:
 
+```c
+/* Return 1 when any odd bit of x equals 1; 0 otherwise. Assume w=32 */
+int any_odd_one(unsigned x);
+```
 {% endtab %}
 {% endtabs %}
 
